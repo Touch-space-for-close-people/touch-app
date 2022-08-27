@@ -1,0 +1,7 @@
+{
+  "name": "touch-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
