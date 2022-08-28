@@ -1,17 +1,62 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      {{title}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content *ngIf="!showShareIdea">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card class="group-card">
+    <ion-card-header>
+      <ion-avatar>
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-avatar>
+
+      <ion-card-title>
+        Drawing club
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-card id="open-modal" class="ion-no-margin">
+        <ion-card-header>
+          Question
+        </ion-card-header>
+        <ion-card-content>
+          <ion-text>
+            If you could meet anyone in the world, who would it be and why?
+          </ion-text>
+          <ion-chip>
+            <ion-avatar>
+              <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"/>
+            </ion-avatar>
+            <ion-label>1:05pm</ion-label>
+          </ion-chip>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="ion-no-margin">
+        <ion-card-header>
+          Question
+        </ion-card-header>
+        <ion-card-content>
+          If you could meet anyone in the world, who would it be and why?
+        </ion-card-content>
+      </ion-card>
+
+    </ion-card-content>
+  </ion-card>
+
+  <app-idea-modal trigger="open-modal" (chooseIdeaCard)="onChooseIdeaCard($event)">
+  </app-idea-modal>
+
+
+</ion-content>
+
+<ion-content *ngIf="showShareIdea" class="ion-padding">
+
+  <app-share-idea></app-share-idea>
+
 </ion-content>

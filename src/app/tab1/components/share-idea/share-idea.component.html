@@ -1,0 +1,47 @@
+<div class="title">What's brought you the most unexpected joy recently?</div>
+<div class="description">
+  <ion-item>
+    <ion-textarea rows="6" cols="20" placeholder="Share your thoughts"></ion-textarea>
+  </ion-item>
+</div>
+<div class="share">
+  <ion-button shape="round">Share</ion-button>
+</div>
+<div class="attaches">
+  <div class="btn" (click)="choosePhoto()">
+    <div class="btn-title">
+      <ion-img src="/assets/icon/pick_picture.svg"></ion-img>
+      <ion-text>Add photo</ion-text>
+    </div>
+    <input type="file"
+           accept="image/png, image/jpeg"
+           id="img"
+           style="display:none;"
+           (change)="handleFileInput($event.target)"
+    >
+    <label for="img">
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </label>
+  </div>
+  <div class="btn">
+    <div class="btn-title">
+      <ion-img src="/assets/icon/tag_people.svg"></ion-img>
+      <ion-text>Tag people</ion-text>
+    </div>
+    <ion-icon name="chevron-forward-outline"></ion-icon>
+  </div>
+  <div class="btn">
+    <div class="btn-title">
+      <ion-img src="/assets/icon/pick_feelings.svg"></ion-img>
+      <ion-text>Feeling</ion-text>
+    </div>
+    <ion-icon name="chevron-forward-outline"></ion-icon>
+  </div>
+<!--  <div class="btn">-->
+<!--    <div class="btn-title">-->
+<!--      <ion-img src="/assets/icon/share_location.svg"></ion-img>-->
+<!--      <ion-text>Share location</ion-text>-->
+<!--    </div>-->
+<!--    <ion-icon name="chevron-forward-outline"></ion-icon>-->
+<!--  </div>-->
+</div>

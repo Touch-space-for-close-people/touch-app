@@ -1,0 +1,49 @@
+<ion-modal #modal [trigger]="trigger" [initialBreakpoint]="0.75" [breakpoints]="[0, 0.75, 1]">
+  <ng-template>
+    <ion-content>
+      <div class="modal-idea">
+        <div class="modal-header">
+          <ion-text>Drawing club</ion-text>
+          <ion-img [src]="'/assets/icon/girl.svg'"></ion-img>
+          <ion-button shape="round" fill="outline" expand="block">Create custom prompt</ion-button>
+        </div>
+
+        <div class="sharing-ideas">
+          <ion-text>Sharing ideas:</ion-text>
+          <swiper
+            [slidesPerView]="3"
+            [spaceBetween]="5"
+            (swiper)="onSwiper($event)"
+            (slideChange)="onSlideChange()"
+          >
+            <ng-template swiperSlide>
+              <app-small-card class="add-idea">
+                <ion-card-content class="ion-no-margin ion-no-padding">
+                  <ion-icon name="add-outline"></ion-icon>
+                </ion-card-content>
+              </app-small-card>
+            </ng-template>
+            <ng-template swiperSlide>
+              <app-small-card text="My morning routing"
+                              (clickedCard)="onCardClick($event, 'My morning routing', modal)"
+              ></app-small-card>
+            </ng-template>
+            <ng-template swiperSlide>
+              <app-small-card text="My morning routing"></app-small-card>
+            </ng-template>
+            <ng-template swiperSlide>
+              <app-small-card text="My morning routing"></app-small-card>
+            </ng-template>
+          </swiper>
+        </div>
+
+        <div class="speak-games">
+          <ion-text>Speak Games:</ion-text>
+          <app-large-card></app-large-card>
+          <app-large-card></app-large-card>
+          <app-large-card></app-large-card>
+        </div>
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal>

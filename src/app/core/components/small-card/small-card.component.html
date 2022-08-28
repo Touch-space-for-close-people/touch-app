@@ -1,0 +1,7 @@
+<ion-card [type]="'button'" (click)="onClickCard()">
+  <ion-card-content *ngIf="text">
+    {{text}}
+  </ion-card-content>
+
+  <ng-content></ng-content>
+</ion-card>

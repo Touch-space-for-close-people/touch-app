@@ -1,0 +1,52 @@
+ion-card {
+  position: relative;
+  --background: #F8F1E1;
+
+  .bookmark-img {
+    padding: 0;
+    top: 0;
+    right: 10px;
+    position: absolute;
+  }
+
+  .card-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  .card-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  .card-footer {
+    margin-top: 23px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .card-questions {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: #283244;
+    }
+
+    .card-answer-btn {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: right;
+      color: #D55C04;
+    }
+  }
+}

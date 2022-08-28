@@ -1,0 +1,28 @@
+ion-card {
+  width: 104px;
+  height: 71px;
+  --background: #D55C04;
+  border-radius: 8px;
+
+  ion-card-content {
+    font-size: small;
+    color: #ffffff
+  }
+
+  &.add-idea {
+    width: 46px;
+
+    ion-card-content {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+
+      ion-icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
